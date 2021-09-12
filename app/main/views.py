@@ -58,3 +58,11 @@ def aljazeera():
     return render_template('aljazeera.html', headline = aljazeera)
 
 
+@main.route('/abc')
+def abc():
+
+    abc = get_abc_news('headlines')
+    abc = abc['articles']
+
+
+    return render_template('abc.html', headline = abc)
