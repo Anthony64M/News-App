@@ -22,3 +22,16 @@ def index():
 
         return render_template('index.html', headline = headline)
 
+
+@main.route('/search/<keyword>')
+def search(keyword):
+    '''
+    View function to display the search results
+    '''
+    news_name_list =keyword.split(" ")
+  
+    searched_news = search_news(keyword)
+
+    title = f'SEARCH RESULT FOR   {news_name_list}'
+    
+    return render_template('search.html',title = title, news = searched_news)
