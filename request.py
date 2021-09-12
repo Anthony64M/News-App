@@ -26,3 +26,15 @@ def get_news(headlines):
     headlines = newsapi.get_top_headlines(sources ="")
 
     return headlines
+
+
+def get_bbc_news(headlines):
+    
+    '''
+    Function returns the top headlines from BBC_news
+    '''
+    newsapi =NewsApiClient(api_key)
+
+    headlines = newsapi.get_top_headlines(sources ="bbc-news")
+
+    return headlines
