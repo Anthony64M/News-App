@@ -46,3 +46,15 @@ def bbc():
 
 
     return render_template('bbc.html', headline = bbc_news )
+
+
+@main.route('/aljazeera')
+def aljazeera():
+
+    aljazeera = get_aljazeera_news('headlines')
+    aljazeera =  aljazeera['articles']
+
+
+    return render_template('aljazeera.html', headline = aljazeera)
+
+
