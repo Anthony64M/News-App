@@ -73,3 +73,24 @@ def search_news(keyword):
 
     return search_results
 
+
+def process_results(headlines):
+    '''
+    Function processes the news result and transform them to a list of Objects
+
+    Returns :
+        news_results: A list of news objects
+    '''
+    search_results = []
+    for items in headlines:
+        title = items.get('title')
+        description= items.get('description')
+        urlToImage= items.get('urlToImage')
+        content = items.get('content')
+        publishedAt = items.get('publishedAt')
+        source = items.get('source')
+
+
+    return search_results
+
+
