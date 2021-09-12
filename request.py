@@ -93,4 +93,17 @@ def process_results(headlines):
 
     return search_results
 
+def get_abc_news(headlines):
+
+    '''
+    Function returns the top headlines from ABC_news
+    '''
+
+    newsapi =NewsApiClient(api_key)
+
+    headlines = newsapi.get_top_headlines(sources ="abc-news")
+
+    return headlines
+
+
 
