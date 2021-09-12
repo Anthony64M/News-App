@@ -35,3 +35,14 @@ def search(keyword):
     title = f'SEARCH RESULT FOR   {news_name_list}'
     
     return render_template('search.html',title = title, news = searched_news)
+
+
+@main.route('/bbc')
+def bbc():
+
+    bbc = get_bbc_news('headlines')
+    bbc_news =  bbc['articles']
+    
+
+
+    return render_template('bbc.html', headline = bbc_news )
